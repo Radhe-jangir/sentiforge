@@ -7,7 +7,10 @@ import { createServer as createViteServer } from 'vite';
 
 const __dirname = process.cwd();
 
-const DB_FILE = path.join(process.env.TEMP!, "sentiment-db.json");
+const DB_FILE = path.join(
+  process.env.TEMP || process.env.TMPDIR || __dirname,
+  "sentiment-db.json"
+);
 
 // Interface definition for DB Records
 interface AnalysisRecord {
