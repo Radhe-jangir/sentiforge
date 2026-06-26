@@ -1,4 +1,6 @@
-# SentiMind: User Authentication Flow & SQLite Isolation
+# SentiForge
+
+AI-powered Sentiment Analysis Platform built with React, Flask, SQLite and TextBlob.
 
 This document outlines the authentication and database architecture implemented for **SentiMind**, conforming to senior full-stack standards utilizing SQLite storage patterns with cryptographic password security.
 
