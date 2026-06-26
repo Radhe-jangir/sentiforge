@@ -2,11 +2,10 @@ import express from 'express';
 import path from 'path';
 import fs from 'fs';
 import crypto from 'crypto';
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from "url";
 import { createServer as createViteServer } from 'vite';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = process.cwd();
 
 const DB_FILE = path.join(process.env.TEMP!, "sentiment-db.json");
 
