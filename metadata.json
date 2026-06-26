@@ -1,0 +1,6 @@
+{
+  "name": "Sentiment Analyzer Dashboard",
+  "description": "A production-grade sentiment analysis application with real-time analytics, word clouds, PDF reports, and downloadable Python Flask equivalents.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

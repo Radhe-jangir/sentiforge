@@ -1,0 +1,227 @@
+/* Custom Styling for SentiMind Sentiment Dashboard */
+
+:root {
+    --bg-primary: #f8fafc;
+    --bg-card: #ffffff;
+    --border-color: #cbd5e1;
+    --text-primary: #0f172a;
+    --text-muted: #64748b;
+    --bg-light: #f1f5f9;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #0b0f19;
+    --bg-card: #131a26;
+    --border-color: #2e3c4e;
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --bg-light: #1c2635;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+.light-modeTransition {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* Card Improvements */
+.card {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 1rem !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.border-top-6 {
+    border-top: 6px solid var(--border-color) !important;
+}
+
+/* Form Styling */
+.text-area-custom {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+    border-radius: 0.75rem !important;
+    font-size: 1rem;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.text-area-custom:focus {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15) !important;
+    border-color: #3b82f6 !important;
+}
+
+.bg-light {
+    background-color: var(--bg-light) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.text-dark {
+    color: var(--text-primary) !important;
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.border-top {
+    border-top: 1px solid var(--border-color) !important;
+}
+
+.border {
+    border: 1px solid var(--border-color) !important;
+}
+
+.navbar {
+    background-color: var(--bg-card) !important;
+}
+
+/* Custom Text Gradients */
+.text-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.text-super-muted {
+    color: #94a3b8;
+}
+
+/* Char counter */
+.char-count {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    pointer-events: none;
+}
+
+/* Polarity classification theme highlight */
+.border-success-polarity {
+    border-top-color: #10b981 !important;
+}
+
+.border-danger-polarity {
+    border-top-color: #ef4444 !important;
+}
+
+.border-neutral-polarity {
+    border-top-color: #6b7280 !important;
+}
+
+.sentiment-emoji-container {
+    animation: bounceEmoji 1s ease infinite alternate;
+}
+
+@keyframes bounceEmoji {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* Table styling for Dark mode compatibility */
+.table {
+    --bs-table-bg: var(--bg-card);
+    --bs-table-color: var(--text-primary);
+    --bs-table-border-color: var(--border-color);
+}
+
+.table-light {
+    --bs-table-bg: var(--bg-light);
+    --bs-table-color: var(--text-primary);
+}
+
+.table > :not(caption) > * > * {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    border-bottom-width: 1px;
+}
+
+thead.table-light > tr > th {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+}
+
+/* Custom spacing Utilities */
+.space-y-4 > * + * {
+    margin-top: 1.5rem !important;
+}
+
+.spacing-y-3 > * + * {
+    margin-top: 1.25rem !important;
+}
+
+/* Responsive media queries for enhanced mobile usability */
+@media (max-width: 767px) {
+    /* Responsive typography sizes */
+    h1.display-5 {
+        font-size: 2rem !important;
+    }
+    .display-2 {
+        font-size: 2.75rem !important;
+    }
+    
+    /* Ensure action buttons are touch/tap-friendly (44px target) */
+    .btn, button, .navbar-brand {
+        min-height: 44px !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Optimize padding and layout offsets */
+    main.container {
+        padding-top: 1.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+    
+    .card {
+        padding: 1.25rem !important;
+    }
+    
+    /* Swipe cue for horizontal responsive table list */
+    .table-responsive {
+        border-radius: 0.75rem;
+        position: relative;
+    }
+    
+    .table-responsive::after {
+        content: "Scroll ➔";
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        background: var(--bg-light);
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9px;
+        opacity: 0.75;
+        border: 1px solid var(--border-color);
+        pointer-events: none;
+    }
+}
+
