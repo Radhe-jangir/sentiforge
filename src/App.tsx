@@ -451,13 +451,7 @@ export default function App() {
                   <BarChart2 className="w-4 h-4" />
                   <span>Dashboard</span>
                 </button>
-                <button 
-                  onClick={() => setActiveTab("code")}
-                  className={`px-3 md:px-4 py-1.5 rounded-lg text-xs md:text-sm font-semibold transition-all duration-150 flex items-center justify-center space-x-1.5 flex-1 sm:flex-initial min-h-[36px] ${activeTab === "code" ? (theme === "dark" ? "bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-md shadow-blue-500/20" : "bg-white text-slate-900 shadow-sm") : "text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"}`}
-                >
-                  <Code2 className="w-4 h-4" />
-                  <span>Python Source</span>
-                </button>
+                
               </div>
 
               {/* Desktop Theme Switch icon */}
@@ -486,19 +480,13 @@ export default function App() {
                   <Sparkles className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-slate-950 dark:text-white text-sm">Portfolio-grade Full-Stack Architecture</h4>
+                  <h4 className="font-semibold text-slate-950 dark:text-white text-sm">AI-Powered Sentiment Analysis Dashboard</h4>
                   <p className="text-xs text-slate-500 mt-1">
-                    This live preview runs on a node Express NLP microservice mirroring TextBlob algorithms. We have pre-compiled the **identical Python + Flask equivalent files** directly on this container root! Use the upper <b>📦 Python/Flask Code</b> tab to view and download files for your GitHub push.
+                    Analyze text using an AI-powered sentiment analysis engine built with React, Express, TextBlob and SQLite. Generate polarity scores, subjectivity insights and export professional PDF reports.
                   </p>
                 </div>
               </div>
-              <button 
-                onClick={() => setActiveTab("code")} 
-                className="text-xs font-semibold bg-blue-600 hover:bg-blue-700 text-white px-3.5 py-2 rounded-lg transition-colors shrink-0 flex items-center space-x-1"
-              >
-                <span>Browse Python Project</span>
-                <ChevronRight className="w-3.5 h-3.5" />
-              </button>
+              
             </div>
 
             {/* Grid Layout splits input form & results dashboard */}
